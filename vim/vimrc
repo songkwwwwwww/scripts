@@ -79,6 +79,8 @@ set cursorline
 " markdown preview
 let vim_markdown_preview_github = 1
 
+" macbook enable backspace 
+set backspace=indent,eol,start
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " macro
@@ -98,6 +100,10 @@ call LoadCscope()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <F6> :GitGutterToggle<CR>
+" compile
+nmap <F5> :w<Enter>:! g++ -std=c++17 % -o %<<CR>
+" run
+nmap <F6> :!./%<<Enter>
+
 nmap <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
